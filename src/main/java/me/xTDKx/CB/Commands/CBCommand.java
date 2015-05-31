@@ -33,9 +33,9 @@ public class CBCommand implements CommandExecutor {
                     if (plugin.getConfig().getBoolean("Loud-Mode")) {
                         p.chat(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("Loud-Format").replace("%bot%", ChatterBot.chatterBotName).replace("%message%", input)));
                     } else {
-                        p.sendMessage(ChatColor.AQUA + "[" + p.getName() + "]" + ChatColor.WHITE + ": " + input);
+                        p.sendMessage(ChatColor.YELLOW + "[" + p.getName() + "]" + ChatColor.YELLOW + "> " + input);
                     }
-                    p.sendMessage(ChatColor.AQUA + "Thinking...");
+                    p.sendMessage(ChatColor.YELLOW + "Thinking...");
                     if (ChatterBot.sessions.containsKey(p.getName())) {
                         final ChatterBotSession cbSession = ChatterBot.sessions.get(p.getName());
 
